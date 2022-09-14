@@ -56,6 +56,70 @@ class ViewController: UIViewController {
         return image
     }()
     
+    private lazy var heartIcon: UIImageView = {
+        let image = UIImageView(image: UIImage(systemName: "heart"))
+        image.setDimensions(width: 28, height: 28)
+        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = true
+        image.tintColor = InstaColor.black
+        return image
+    }()
+    
+    private lazy var messageIcon: UIImageView = {
+        let image = UIImageView(image: UIImage(systemName: "message"))
+        image.setDimensions(width: 28, height: 28)
+        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = true
+        image.tintColor = InstaColor.black
+        return image
+    }()
+    
+    private lazy var shareIcon: UIImageView = {
+        let image = UIImageView(image: UIImage(systemName: "paperplane"))
+        image.setDimensions(width: 28, height: 28)
+        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = true
+        image.tintColor = InstaColor.black
+        return image
+    }()
+    
+    private lazy var bookmarkIcon: UIImageView = {
+        let image = UIImageView(image: UIImage(systemName: "bookmark"))
+        image.setDimensions(width: 30, height: 28)
+        image.contentMode = .scaleToFill
+        image.clipsToBounds = true
+        image.tintColor = InstaColor.black
+        return image
+    }()
+    
+    private lazy var pageControl: UIPageControl = {
+        let control = UIPageControl()
+        control.numberOfPages = 3
+        control.pageIndicatorTintColor = .systemGray
+        control.currentPageIndicatorTintColor = .systemBlue
+        control.contentHorizontalAlignment = .center
+        control.currentPage = 0
+        return control
+    }()
+    
+    private lazy var spacerView: UIView = {
+        let spacer = UIView()
+        spacer.setWidth(width: 60)
+        return spacer
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [
+            heartIcon, messageIcon,
+            shareIcon, pageControl,
+            spacerView, bookmarkIcon
+        ])
+        stack.axis = .horizontal
+        stack.distribution = .fillProportionally
+        stack.spacing = 16
+        return stack
+    }()
+    
     private lazy var contentImage: UIImageView = {
         let image = UIImageView(image: #imageLiteral(resourceName: "post"))
         image.contentMode = .scaleAspectFill
@@ -97,7 +161,8 @@ extension ViewController {
                 subTitleLabel,
                 checkMark,
                 moreIcon,
-                contentImage
+                contentImage,
+                stackView
             ]
         )
     }
@@ -105,7 +170,6 @@ extension ViewController {
     //Setup: - Constraints
     private func setupConstraints() {
         //Constraints: - Profile Image
-        
         cardView.anchor(
             top: view.topAnchor,
             left: view.leftAnchor,
@@ -146,7 +210,7 @@ extension ViewController {
         moreIcon.anchor(
             top: cardView.topAnchor,
             right: cardView.rightAnchor,
-            paddingTop: 15,
+            paddingTop: 20,
             paddingRight: 8
         )
         
@@ -156,6 +220,16 @@ extension ViewController {
             right: cardView.rightAnchor,
             paddingTop: 5,
             height: 560
+        )
+        
+        stackView.anchor(
+            top: contentImage.bottomAnchor,
+            left: cardView.leftAnchor,
+            right: cardView.rightAnchor,
+            paddingTop: 5,
+            paddingLeft: 12,
+            paddingRight: 12,
+            height: 28
         )
     }
 }
