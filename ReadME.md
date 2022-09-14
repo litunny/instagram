@@ -21,7 +21,7 @@
     Instagram Mobile App - Concept Design
 
 ## Screenshot:
-    ![image description](Card/screenshot.png)
+![image description](Card/screenshot.png)
 
 ## Disclamer
     This is just a conceptualized design and wasn't design/develop to clone the official instagram app!
