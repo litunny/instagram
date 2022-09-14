@@ -14,7 +14,7 @@ final class ProfileImageView: UIView {
         imageView.layer.borderColor = InstaColor.black.cgColor
         imageView.setDimensions(size: InstaSize.innerSmall)
         imageView.layer.borderWidth = 1
-        imageView.layer.cornerRadius = 36/2
+        imageView.layer.cornerRadius = InstaSize.innerSmall.height * 0.5
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFit
         return imageView
