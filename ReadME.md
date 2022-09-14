@@ -1,7 +1,7 @@
 # Instagram Card - Post
 
 ## Inspiration
-   Official Instagram Mobile App - Concept Design
+    Official Instagram Mobile App - Concept Design
 
 ## Disclamer
     This is just a conceptualized design and wasn't design/develop to clone the official instagram app!
