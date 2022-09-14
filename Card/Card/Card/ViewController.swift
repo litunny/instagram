@@ -12,31 +12,74 @@ class ViewController: UIViewController {
     //MARK: - Properties
     private lazy var cardView: UIView = {
         let view = UIView()
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.systemGray.cgColor
-        view.backgroundColor = UIColor(named: "white")
+        view.backgroundColor = InstaColor.white
         return view
     }()
     
-    private lazy var profileImageView: UIImageView = {
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "profile"))
-        imageView.setDimensions(width: 50, height: 50)
-        imageView.layer.borderColor = UIColor.black.cgColor
-        imageView.layer.borderWidth = 2
-        imageView.layer.cornerRadius = 25
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
+    private lazy var profileImageView: ProfileImageView = {
+        let imageView = ProfileImageView()
+        imageView.setDimensions(size: InstaSize.small)
         return imageView
+    }()
+    
+    private lazy var titleLabel: UILabel = {
+        let title = UILabel()
+        title.text = "loganpaul"
+        title.font = InstaFont.boldTitle
+        title.textColor = InstaColor.black
+        return title
+    }()
+    
+    private lazy var subTitleLabel: UILabel = {
+        let title = UILabel()
+        title.text = "The Moon"
+        title.font = InstaFont.small
+        title.textColor = InstaColor.black
+        return title
+    }()
+    
+    private lazy var checkMark: UIImageView = {
+        let image = UIImageView(image: UIImage(systemName: "checkmark.seal.fill"))
+        image.setDimensions(width: 11, height: 10)
+        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = true
+        image.tintColor = UIColor.systemBlue
+        return image
+    }()
+    
+    private lazy var moreIcon: UIImageView = {
+        let image = UIImageView(image: UIImage(systemName: "ellipsis"))
+        image.setDimensions(width: 11, height: 10)
+        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = true
+        image.tintColor = InstaColor.black
+        return image
+    }()
+    
+    private lazy var contentImage: UIImageView = {
+        let image = UIImageView(image: #imageLiteral(resourceName: "post"))
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
+        return image
     }()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: "white")
+        view.backgroundColor = InstaColor.white
         self.setupView()
         self.setupConstraints()
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        profileImageView.applyGradient(
+            with: [.purple, .red, .orange, .yellow],
+            gradientOrientation: .vertical,
+            size: InstaSize.small
+        )
+    }
+    
     //MARK: - Selector
 }
 
@@ -49,7 +92,12 @@ extension ViewController {
         
         cardView.addSubview(
             [
-                profileImageView
+                profileImageView,
+                titleLabel,
+                subTitleLabel,
+                checkMark,
+                moreIcon,
+                contentImage
             ]
         )
     }
@@ -72,6 +120,42 @@ extension ViewController {
             left: cardView.leftAnchor,
             paddingTop: 8,
             paddingLeft: 8
+        )
+        
+        titleLabel.anchor(
+            top: cardView.topAnchor,
+            left: profileImageView.rightAnchor,
+            paddingTop: 11,
+            paddingLeft: 8
+        )
+        
+        subTitleLabel.anchor(
+            top: titleLabel.bottomAnchor,
+            left: profileImageView.rightAnchor,
+            paddingTop: 2,
+            paddingLeft: 8
+        )
+        
+        checkMark.anchor(
+            top: titleLabel.topAnchor,
+            left: titleLabel.rightAnchor,
+            paddingTop: 3,
+            paddingLeft: 3
+        )
+        
+        moreIcon.anchor(
+            top: cardView.topAnchor,
+            right: cardView.rightAnchor,
+            paddingTop: 15,
+            paddingRight: 8
+        )
+        
+        contentImage.anchor(
+            top: profileImageView.bottomAnchor,
+            left: cardView.leftAnchor,
+            right: cardView.rightAnchor,
+            paddingTop: 5,
+            height: 560
         )
     }
 }

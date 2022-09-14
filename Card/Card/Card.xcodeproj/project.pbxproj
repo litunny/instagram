@@ -18,6 +18,10 @@
 		FD4DC50C28D1B3FD00BEE8B7 /* CardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4DC50B28D1B3FD00BEE8B7 /* CardUITestsLaunchTests.swift */; };
 		FD4DC51B28D1B6A000BEE8B7 /* Extensions + UIConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4DC51A28D1B6A000BEE8B7 /* Extensions + UIConstraints.swift */; };
 		FD4DC51D28D1B73900BEE8B7 /* Extensions + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4DC51C28D1B73900BEE8B7 /* Extensions + UIView.swift */; };
+		FD4DC51F28D1BCCA00BEE8B7 /* Extensions + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4DC51E28D1BCCA00BEE8B7 /* Extensions + UIColor.swift */; };
+		FD4DC52228D1BF0600BEE8B7 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4DC52128D1BF0600BEE8B7 /* ProfileImageView.swift */; };
+		FD4DC52428D1D57600BEE8B7 /* Extensions + CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4DC52328D1D57600BEE8B7 /* Extensions + CGFloat.swift */; };
+		FD4DC52628D1D91100BEE8B7 /* Extensions + UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4DC52528D1D91100BEE8B7 /* Extensions + UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		FD4DC50B28D1B3FD00BEE8B7 /* CardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FD4DC51A28D1B6A000BEE8B7 /* Extensions + UIConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIConstraints.swift"; sourceTree = "<group>"; };
 		FD4DC51C28D1B73900BEE8B7 /* Extensions + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIView.swift"; sourceTree = "<group>"; };
+		FD4DC51E28D1BCCA00BEE8B7 /* Extensions + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIColor.swift"; sourceTree = "<group>"; };
+		FD4DC52128D1BF0600BEE8B7 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		FD4DC52328D1D57600BEE8B7 /* Extensions + CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + CGFloat.swift"; sourceTree = "<group>"; };
+		FD4DC52528D1D91100BEE8B7 /* Extensions + UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIFont.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		FD4DC4E428D1B3FB00BEE8B7 /* Card */ = {
 			isa = PBXGroup;
 			children = (
+				FD4DC52028D1BEE400BEE8B7 /* Components */,
 				FD4DC51928D1B66800BEE8B7 /* Extensions */,
 				FD4DC4E528D1B3FB00BEE8B7 /* AppDelegate.swift */,
 				FD4DC4E728D1B3FB00BEE8B7 /* SceneDelegate.swift */,
@@ -137,8 +146,19 @@
 			children = (
 				FD4DC51A28D1B6A000BEE8B7 /* Extensions + UIConstraints.swift */,
 				FD4DC51C28D1B73900BEE8B7 /* Extensions + UIView.swift */,
+				FD4DC51E28D1BCCA00BEE8B7 /* Extensions + UIColor.swift */,
+				FD4DC52328D1D57600BEE8B7 /* Extensions + CGFloat.swift */,
+				FD4DC52528D1D91100BEE8B7 /* Extensions + UIFont.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD4DC52028D1BEE400BEE8B7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD4DC52128D1BF0600BEE8B7 /* ProfileImageView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,11 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4DC52228D1BF0600BEE8B7 /* ProfileImageView.swift in Sources */,
 				FD4DC4EA28D1B3FB00BEE8B7 /* ViewController.swift in Sources */,
+				FD4DC52628D1D91100BEE8B7 /* Extensions + UIFont.swift in Sources */,
 				FD4DC4E628D1B3FB00BEE8B7 /* AppDelegate.swift in Sources */,
 				FD4DC51D28D1B73900BEE8B7 /* Extensions + UIView.swift in Sources */,
+				FD4DC51F28D1BCCA00BEE8B7 /* Extensions + UIColor.swift in Sources */,
 				FD4DC51B28D1B6A000BEE8B7 /* Extensions + UIConstraints.swift in Sources */,
 				FD4DC4E828D1B3FB00BEE8B7 /* SceneDelegate.swift in Sources */,
+				FD4DC52428D1D57600BEE8B7 /* Extensions + CGFloat.swift in Sources */,
 				FD4DC4F028D1B3FB00BEE8B7 /* Card.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

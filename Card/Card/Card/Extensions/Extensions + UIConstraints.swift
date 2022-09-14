@@ -85,10 +85,20 @@ extension UIView {
         heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     
+    func setDimensions(size: (width: CGFloat, height: CGFloat)) {
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalToConstant: size.width).isActive = true
+        heightAnchor.constraint(equalToConstant: size.height).isActive = true
+    }
+    
     func addConstraintsToFillView(_ view: UIView) {
         translatesAutoresizingMaskIntoConstraints = false
-        anchor(top: view.topAnchor, left: view.leftAnchor,
-               bottom: view.bottomAnchor, right: view.rightAnchor)
+        anchor(
+            top: view.topAnchor,
+            left: view.leftAnchor,
+            bottom: view.bottomAnchor,
+            right: view.rightAnchor
+        )
     }
 }
 
