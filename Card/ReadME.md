@@ -5,6 +5,7 @@
     2.  Programmatic - First Approach
     3.  Component - Based 
     4.  SoC
+    5.  Day/Night Mode
 
 ## Inspiration
     Official Instagram Mobile App - Concept Design
