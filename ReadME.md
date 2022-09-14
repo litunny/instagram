@@ -16,4 +16,4 @@ Osinnowo Emmanuel
 
 ## Screenshot
 
-![image description](screenshot.gif)
+![image description](Card/screenshot.gif)
