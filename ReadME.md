@@ -1,5 +1,11 @@
 # Instagram Concept - Design
 
+## Technologies
+    1.  iOS UIKit
+    2.  Programmatic - First Approach
+    3.  Component - Based 
+    4.  SoC
+
 ## Inspiration
     Official Instagram Mobile App - Concept Design
 
