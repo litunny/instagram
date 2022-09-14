@@ -1,4 +1,4 @@
-# Instagram Concept - Design
+# Instagram UIKit Framework - Design
 
 ## Technologies
     1.  iOS UIKit
@@ -6,6 +6,16 @@
     3.  Component - Based 
     4.  SoC
     5.  Day/Night Mode
+
+## Future Design
+    1.  Comments
+    2.  Swipeable Card
+    3.  Like Effect - Lottie 
+    4.  Post Tags
+    5.  ScrollView Adoption
+    6.  Re-usable card component
+    7.  Card Framework
+    8.  Clean Ups
 
 ## Inspiration
     Instagram Mobile App - Concept Design
