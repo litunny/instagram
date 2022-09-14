@@ -1,4 +1,4 @@
-# Instagram Card - Post
+# Instagram Concept - Design
 
 ## Inspiration
     Official Instagram Mobile App - Concept Design
