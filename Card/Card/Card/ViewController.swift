@@ -156,12 +156,12 @@ extension ViewController {
         cardView.addSubview(
             [
                 profileImageView,
-//                titleLabel,
-//                subTitleLabel,
-//                checkMark,
-//                moreIcon,
-//                contentImage,
-//                stackView
+                titleLabel,
+                subTitleLabel,
+                checkMark,
+                moreIcon,
+                contentImage,
+                stackView
             ]
         )
     }
@@ -185,50 +185,50 @@ extension ViewController {
             paddingLeft: 8
         )
         
-//        titleLabel.anchor(
-//            top: cardView.topAnchor,
-//            left: profileImageView.rightAnchor,
-//            paddingTop: 11,
-//            paddingLeft: 8
-//        )
-//
-//        subTitleLabel.anchor(
-//            top: titleLabel.bottomAnchor,
-//            left: profileImageView.rightAnchor,
-//            paddingTop: 2,
-//            paddingLeft: 8
-//        )
-//
-//        checkMark.anchor(
-//            top: titleLabel.topAnchor,
-//            left: titleLabel.rightAnchor,
-//            paddingTop: 3,
-//            paddingLeft: 3
-//        )
-//
-//        moreIcon.anchor(
-//            top: cardView.topAnchor,
-//            right: cardView.rightAnchor,
-//            paddingTop: 20,
-//            paddingRight: 8
-//        )
-//
-//        contentImage.anchor(
-//            top: profileImageView.bottomAnchor,
-//            left: cardView.leftAnchor,
-//            right: cardView.rightAnchor,
-//            paddingTop: 5,
-//            height: 560
-//        )
-//
-//        stackView.anchor(
-//            top: contentImage.bottomAnchor,
-//            left: cardView.leftAnchor,
-//            right: cardView.rightAnchor,
-//            paddingTop: 5,
-//            paddingLeft: 12,
-//            paddingRight: 12,
-//            height: 28
-//        )
+        titleLabel.anchor(
+            top: cardView.topAnchor,
+            left: profileImageView.rightAnchor,
+            paddingTop: 11,
+            paddingLeft: 8
+        )
+
+        subTitleLabel.anchor(
+            top: titleLabel.bottomAnchor,
+            left: profileImageView.rightAnchor,
+            paddingTop: 2,
+            paddingLeft: 8
+        )
+
+        checkMark.anchor(
+            top: titleLabel.topAnchor,
+            left: titleLabel.rightAnchor,
+            paddingTop: 3,
+            paddingLeft: 3
+        )
+
+        moreIcon.anchor(
+            top: cardView.topAnchor,
+            right: cardView.rightAnchor,
+            paddingTop: 20,
+            paddingRight: 8
+        )
+
+        contentImage.anchor(
+            top: profileImageView.bottomAnchor,
+            left: cardView.leftAnchor,
+            right: cardView.rightAnchor,
+            paddingTop: 5,
+            height: 560
+        )
+
+        stackView.anchor(
+            top: contentImage.bottomAnchor,
+            left: cardView.leftAnchor,
+            right: cardView.rightAnchor,
+            paddingTop: 5,
+            paddingLeft: 12,
+            paddingRight: 12,
+            height: 28
+        )
     }
 }
