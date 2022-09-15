@@ -8,17 +8,31 @@
 import UIKit
 
 final class ProfileImageView: UIView {
+    
+    public var profileImage: UIImage = #imageLiteral(resourceName: "avatar") {
+        didSet {
+            profileImageView.image = profileImage
+            setupView()
+        }
+    }
+    
     private let standardPadding: CGFloat = 10
+    
     private lazy var profileImageView: UIImageView = {
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "profile"))
+        let imageView = UIImageView(image: self.profileImage)
         imageView.layer.borderColor = InstaColor.black.cgColor
         imageView.setDimensions(size: InstaSize.innerSmall)
-        imageView.layer.borderWidth = 1
+        imageView.layer.borderWidth = CGFloat.one
         imageView.layer.cornerRadius = InstaSize.innerSmall.height * 0.5
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
+    
+    public init(image: UIImage) {
+        super.init(frame: .zero)
+        self.profileImage = image
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,13 +40,6 @@ final class ProfileImageView: UIView {
     }
     
     private func setupView() {
-        layoutMargins = UIEdgeInsets(
-            top: standardPadding,
-            left: standardPadding,
-            bottom: standardPadding,
-            right: standardPadding
-        )
-       
         addSubview(profileImageView)
         profileImageView.center(inView: self)
     }

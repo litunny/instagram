@@ -13,3 +13,7 @@ public struct InstaSize {
     static let small: ProfileImageSize = (width: 40, height: 40)
     static let innerSmall: ProfileImageSize = (width: 36, height: 36)
 }
+
+extension CGFloat {
+    static let one: CGFloat = 1
+}

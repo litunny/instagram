@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     private lazy var profileImageView: ProfileImageView = {
         let imageView = ProfileImageView()
+        imageView.profileImage = #imageLiteral(resourceName: "profile")
         imageView.setDimensions(size: InstaSize.small)
         return imageView
     }()
