@@ -17,10 +17,11 @@ class ViewController: UIViewController {
     }()
     
     private lazy var profileImageView: ProfileImageView = {
-        let imageView = ProfileImageView()
-        imageView.profileImage = #imageLiteral(resourceName: "profile")
-        imageView.profileImageSize = .medium
-        imageView.setDimensions(size: InstaSize.medium)
+        let imageView = ProfileImageView(
+            with: #imageLiteral(resourceName: "profile"),
+            forSize: .small
+        )
+        imageView.setDimensions(size: InstaSize.small)
         return imageView
     }()
     

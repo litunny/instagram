@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 enum ProfileImageStatus {
     case closed, opened
 }
@@ -33,6 +34,7 @@ enum ProfileSize {
     }
 }
 
+///Profile Image View (Circular)
 final class ProfileImageView: UIView {
     
     ///Profile Image of the current user
@@ -55,7 +57,7 @@ final class ProfileImageView: UIView {
     ///This will be a determinant for overall size of the profile, inorder to re-usable
     public var profileImageSize: ProfileSize = .small {
         didSet{
-            setInnerProfileImageSize(to: profileImageSize)
+            setupView()
         }
     }
     
@@ -89,7 +91,23 @@ final class ProfileImageView: UIView {
         setInnerProfileImageSize(to: self.profileImageSize)
     }
     
-    public init(image: UIImage) {
+    public convenience init(with image: UIImage,
+                            withStatus status: ProfileImageStatus = .closed,
+                            forSize size: ProfileSize
+    ) {
+        self.init(with: image, withStatus: status)
+        self.profileImageSize = size
+    }
+    
+    public convenience init(with image: UIImage,
+                            withStatus status: ProfileImageStatus = .closed
+    ) {
+        self.init(with: image)
+        self.profileImageStatus = status
+        self.setupView()
+    }
+    
+    public init(with image: UIImage) {
         super.init(frame: .zero)
         self.profileImage = image
         self.setupView()
