@@ -18,6 +18,8 @@ enum ProfileSize {
         switch self {
             case .small:
                 return InstaSize.small
+            case .medium:
+                return InstaSize.medium
             default:
                 return InstaSize.medium
         }
@@ -28,6 +30,9 @@ enum ProfileSize {
             case .small:
                 return InstaSize.innerSmall
                 
+            case .medium:
+                return InstaSize.innerMedium
+            
             default:
                 return InstaSize.innerMedium
         }
@@ -85,10 +90,20 @@ final class ProfileImageView: UIView {
         profileImageView.setDimensions(size: size.innerSize)
     }
     
+    private func setRingProfileImageSize(to size: ProfileSize) {
+        setDimensions(size: size.ringSize)
+    }
+    
     private func setupView() {
         addSubview(profileImageView)
         profileImageView.center(inView: self)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setRingProfileImageSize(to: self.profileImageSize)
         setInnerProfileImageSize(to: self.profileImageSize)
+        setProfileStatus(to: self.profileImageStatus)
     }
     
     public convenience init(with image: UIImage,
@@ -97,6 +112,7 @@ final class ProfileImageView: UIView {
     ) {
         self.init(with: image, withStatus: status)
         self.profileImageSize = size
+        self.setupView()
     }
     
     public convenience init(with image: UIImage,

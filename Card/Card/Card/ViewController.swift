@@ -19,9 +19,9 @@ class ViewController: UIViewController {
     private lazy var profileImageView: ProfileImageView = {
         let imageView = ProfileImageView(
             with: #imageLiteral(resourceName: "profile"),
-            forSize: .small
+            withStatus: .opened,
+            forSize: .medium
         )
-        imageView.setDimensions(size: InstaSize.small)
         return imageView
     }()
     
@@ -140,7 +140,6 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        profileImageView.profileImageStatus = .opened
     }
     
     //MARK: - Selector
